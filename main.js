@@ -228,3 +228,25 @@ function score_status() {
     document.getElementById("QR").innerHTML = "Sua Nota: " +playerscore+"|"+ NumberOfValue;
   });
 }
+
+//search
+
+function search(){
+  searching = document.getElementById("searchbar").value;
+  if (!searching == "") {
+    var searchref = firebase.database().ref(searching + "/name");
+    var isQuizCreated;
+    var isJoining = false;
+    searchref.on("value", data => {
+      isQuizCreated = data.val();
+      console.log(isQuizCreated);
+      if (!isJoining) {
+        isJoining = true;
+        if (isQuizCreated == searching) {
+          localStorage.setItem("quiz", searching);
+          window.location = "quest.html";
+        }
+      }
+    });
+  }
+}
