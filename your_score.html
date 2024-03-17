@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Maker - Editor</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="main.js"></script>
+    <style>
+        #header {
+            background-color: black;
+            color: aliceblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 5px ridge aliceblue;
+            width: 100%;
+            text-align: center;
+        }
+        #Finished{
+            background-color: greenyellow;
+            position: fixed;
+            right: 5px;
+            bottom: 5px;
+        }
+        #QuestData{
+            border-top: 5px ridge black;
+        }
+    </style>
+</head>
+
+<body onload="score_status()">
+    <div id="header">
+        <hr>
+        <a href="index.html" style="float: left;color: cadetblue;">Voltar a Página Inicial</a>
+        <h4>Dados do Questionário</h4>
+    </div>
+    <br><br><br>
+    <h1 id="QuestName"></h1>
+    <h1 id="QC"></h1>
+    <h1 id="QR"></h1>
+    <div id="QuestData"></div>
+    <button id="Finished" onclick="returnToPage()">Concluído</button>
+</body>
+
+</html>

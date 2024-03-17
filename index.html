@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Maker - Byjus Future School Project</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="main.js"></script>
+    <style>
+        #header {
+            background-color: black;
+            color: aliceblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 5px ridge aliceblue;
+            width: 100%;
+            text-align: center;
+        }
+
+        .search{
+            float: right;
+        }
+
+        #output{
+            border-left: 2px black double;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body onload="getData()">
+    <div id="header">
+        <hr>
+        <a href="creator.html" style="float: left;color: green;">Crie Um Questionario</a>
+        <button onclick="serach()" class="search">Pesquisar</button>
+        <input class="search" style="border: outset black 2px;">
+        <h4>Question Maker</h4>
+    </div>
+    <div id="output">
+
+    </div>
+</body>
+
+</html>

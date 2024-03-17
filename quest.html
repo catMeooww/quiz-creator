@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Maker - Byjus Future School Project</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="main.js"></script>
+    <style>
+        #header {
+            background-color: black;
+            color: aliceblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 5px ridge aliceblue;
+            width: 100%;
+            text-align: center;
+        }
+
+        .search {
+            float: right;
+        }
+
+        #output {
+            border-left: 2px black double;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body onload="QuizData()">
+    <div id="header">
+        <hr>
+        <a href="index.html" style="float: left;color:deeppink;">Voltar a Página Inicial</a>
+        <h4 id="QuestName">Questionário</h4>
+    </div>
+    <div id="output">
+        <h2 id="QuestionQuest">Questão 0</h2>
+        <hr>
+        <span>Resposta:</span><input id="yourAnswer" style="text-transform: lowercase;">
+        <hr>
+        <p>Valor da questão:</p>
+        <label id="questionValue">0</label>
+        <hr>
+        <button onclick="Next()">Enviar</button>
+        <hr>
+        <p>Você está na questão:</p>
+        <label id="nowquestion">0</label>
+    </div>
+</body>
+
+</html>

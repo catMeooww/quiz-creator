@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Maker - Editor</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase-database.js"></script>
+    <script src="main.js"></script>
+    <style>
+        #header {
+            background-color: black;
+            color: aliceblue;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-bottom: 5px ridge aliceblue;
+            width: 100%;
+            text-align: center;
+        }
+
+        #create{
+            border-left: 2px blueviolet double;
+            margin-top: 150px;
+            text-align: center;
+        }
+
+        #create input{
+            width: 80%;
+        }
+
+        #questionData{
+            visibility: hidden;
+        }
+
+#bottom-bar p{
+    width: 80%;
+}
+#bottom-bar button{
+    float: right;
+    background-color: greenyellow;
+    color: aliceblue;
+}
+
+        #bottom-bar{
+            display: inline-flex;
+            background-color: blueviolet;
+            color: aliceblue;
+            position: fixed;
+            bottom: -10;
+            left: 0;
+            border-top: 5px ridge aliceblue;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <hr>
+        <a href="index.html" style="float: left;color: brown;">Cancelar</a>
+        <h4>Editor</h4>
+    </div>
+    <div id="create">
+        <div id="name">
+            <h1>Nome do Questionario</h1>
+            <input id="quizname" placeholder="Escrever">
+            <button onclick="createQuiz()">Criar</button>
+        </div>
+        <div id="questionData">
+            <hr>
+            <h3>Pergunta:</h3>
+            <input id="questionAsk" placeholder="Escrever">
+            <hr>
+            <h3>Resposta:</h3>
+            <input id="questionAnswer" placeholder="Escrever" style="text-transform: lowercase;">
+            <hr>
+            <h3>Valor:</h3>
+            <input id="questionValue" placeholder="Escrever" type="number">
+            <hr>
+            <button onclick="sendQuest()">Enviar</button>
+        </div>
+    </div>
+    <div id="bottom-bar">
+
+    </div>
+</body>
+
+</html>
